@@ -1,6 +1,7 @@
 -- Task: Create a trigger to decrease the quantity of an item when a new order is added
 -- This trigger will run after a new row is inserted into the 'orders' table
 -- It will reduce the quantity of the corresponding item in the 'items' table
+DROP TRIGGER IF EXISTS `reduce_order_qty`;
 
 DELIMITER //
 
