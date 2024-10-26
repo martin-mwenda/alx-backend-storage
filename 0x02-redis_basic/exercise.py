@@ -106,16 +106,16 @@ class Cache:
         if fn:
             return fn(result)
         return result
-
+        """
     def get_str(self, key: str) -> str:
         """
         This is a method that retrieves string data from the redis storage
 
         Args:
-            key (str) - the key of the data to fetch
+            key(str) - the key of the data to fetch
 
         Returns:
-            String data (str)
+            String data(str)
         """
         return self.get(key, lambda x: x.decode('utf-8'))
 
@@ -124,9 +124,9 @@ class Cache:
         This is a method that retrieves integer data from the redis storage
 
         Args:
-            key (str) - the key of the data to fetch
+            key(str) - the key of the data to fetch
 
         Returns:
-            Integer data (int)
+            Integer data(int)
         """
         return self.get(key, lambda x: int(x))
